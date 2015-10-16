@@ -19,7 +19,10 @@ try:
 except Exception as e:
     print('Problems reading tree file(s):\n' + str(e), file=sys.stderr)
 
-rf, rf_max, x1, x2, x3, x4, x5 = t1.robinson_foulds(t2)
-print(rf)
-        
+try:
+    rf, rf_max, x1, x2, x3, x4, x5 = t1.robinson_foulds(t2, unrooted_trees=True)
+    print(rf)
+except Exception as e:
+    print('Error when computing the Robinson-Foulds distances:\n' + str(e), file=sys.stderr)
+    
 
