@@ -13,14 +13,14 @@ with open("README.md", "r") as fh:
         long_description += line
 
 
-with open('alv/version.py') as fh:
+with open('robinson_foulds/version.py') as fh:
     exec(fh.read())
 
 if sys.version_info.major < 3:
     sys.exit('\n'
              'Sorry, Python 2 is not supported\n'
-             'Did you run pip install alv?\n'
-             'Try \'pip3 install alv\'')
+             'Did you run pip install robinson_foulds?\n'
+             'Try \'pip3 install robinson_foulds\'')
 
 elif sys.version_info.minor < 2:
     sys.exit('\nSorry, Python < 3.2 is not supported\n')
@@ -39,7 +39,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/arvestad/robinson_foulds",
-    test_suite = "tests",
+#    test_suite = "tests",
     packages=setuptools.find_packages(),
     python_requires='>=3',
     install_requires=requirements,
